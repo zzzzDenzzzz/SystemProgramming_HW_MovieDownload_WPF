@@ -1,0 +1,43 @@
+﻿<Window x:Class="SystemProgramming_HW_MovieDownload_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemProgramming_HW_MovieDownload_WPF"
+        mc:Ignorable="d"
+        Title="MovieDownload" Height="200" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ProgressBar
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Name="downloadStatus"
+            Minimum="0"
+            Maximum="100" 
+            Height="20"
+            Width="500"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"/>
+        <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            Content="MovieDownload"
+            Height="20"
+            Width="100"
+            Click="DownloadStart"/>
+        <Button
+            Grid.Row="0"
+            Grid.Column="1"
+            Content="Message"
+            Height="20"
+            Width="100"
+            Click="MessageShow"/>
+    </Grid>
+</Window>
